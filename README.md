@@ -17,7 +17,7 @@
 - JAR file will be created in the `target` folder. 
 
 ### Test
-- copy or soft link sample_dataset in `DenForest-SIGMOD2021 git` to the DISC-ICDE2021 directory
+- Copy or soft link `sample_dataset` folder in `DenForest-SIGMOD2021 git` to the DISC-ICDE2021 directory
 - Run `mvn test` // Run several tests using `sample_dataset`.
 
 ### Example Code 
