@@ -12,7 +12,6 @@ import java.util.Set;
 import disc.epochbasedrtree.Element;
 import disc.epochbasedrtree.Epoch_Based_Rtree;
 import disc.epochbasedrtree.MBR;
-import disc.Point;
 import disc.unionfind.UnionFind;
 
 
@@ -75,7 +74,7 @@ public class DISC implements Serializable{
 	 *  Return excores and neocores.
 	 *  
 	 *  */
-	public void  COLLECT(List<Point> list_in, List<Point> list_out)
+	public void collect(List<Point> list_in, List<Point> list_out)
 	{
 		
 		C_out.clear();
@@ -185,7 +184,7 @@ public class DISC implements Serializable{
 	 *  
 	 *  */
 	
-	public void CLUSTER( )
+	public void cluster( )
 	{
 		cluster_check = ClusterID;	
 		for (Point p : excore) {
@@ -717,8 +716,22 @@ public class DISC implements Serializable{
 		
 		
 	}
-	
-	public int Validation(List<Point> curWindow){
+
+	public int[] labelAndReturn(List<Point> window) {
+		int res[] = new int[window.size()];
+
+		int ii=0;
+		for ( Point q: window )
+		{
+			if( q.mark == - 1) res[ii] = -1;
+			else res[ii] = uf.find(q.mark);
+
+			ii++;
+		}
+		return res;
+	}
+
+		public int Validation(List<Point> curWindow){
 		System.out.println("RUN VALIDATION...");
 		for(Point trj :  curWindow)
 		{

@@ -2,7 +2,6 @@ package example;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +30,7 @@ public class DISC_test {
 
 	public  void run(String[] args) {
 
-	path = args[0];
+	path = args[0];	// path to dataset forlder (sample_dataset)
 	option = Integer.parseInt(args[1]); // select datase:  1. DTG, 2.GeoLife, 3.IRIS, 4.Household
 	int pminpts = Integer.parseInt(args[2]); // density threshold: minPts
 	double peps = Double.parseDouble(args[3]); // distance threshold: epsilon
@@ -59,19 +58,18 @@ public class DISC_test {
 		
 	indented_println("[Example.DISC] Update the strides...");
 		
+	for( int i = 0 ; i < stride*slide ; i+=stride)
+	{
+		List<Point> out = dataset.subList(i,i+stride);
+		List<Point> in = dataset.subList(window+i,window+i+stride);
+		disc.collect(in, out);
+		disc.cluster();
+	}
 
+	indented_println("[Example.DISC] Complete!");
 
-		for( int i = 0 ; i < stride*slide ; i+=stride)
-		{
-			List<Point> out = dataset.subList(i,i+stride);
-			List<Point> in = dataset.subList(window+i,window+i+stride);
-			disc.COLLECT(in, out);
-			disc.CLUSTER();
-		}
-		
+	int resDenForest[]  = disc.labelAndReturn(dataset.subList(stride*slide,window+stride*slide)); // DISC's clustering result;
 
-		indented_println("[Example.DISC] Complete!");
-		
 
 	}
 	
