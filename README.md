@@ -29,6 +29,35 @@ You can find example codes in following files.
 You can find test codes in following files. 
 - ` src/test/java/disc/DISCTest.java`
 
+## Directory Overview 
+```
+DISC-ICDE2021
+├── pom.xml
+├── README.md
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── disc
+    │   │       ├── DBSCAN_options.java
+    │   │       ├── DISC.java                       // DISC algorithm with MS-BFS code
+    │   │       ├── epochbasedrtree                 // Epoch_based_rtree for efficient data point retrievals.
+    │   │       │   ├── Element.java
+    │   │       │   ├── Epoch_Based_Rtree.java      
+    │   │       │   ├── MBR.java
+    │   │       │   └── Node.java       
+    │   │       ├── Point.java        
+    │   │       └── unionfind                      // unionfind
+    │   │           └── UnionFind.java
+    │   └── resources
+    └── test
+        └── java
+            ├── disc
+            │   └── DISCTest.java             // test code using the below example
+            └── example
+                └── DISC_test.java            // example code for DISC
+
+```
+
 ## Reference
 B. Kim, K. Koo, J. Kim and B. Moon,  "DISC: Density-Based Incremental Clustering by Striding over Streaming Data," in 2021 IEEE 37th International Conference on Data Engineering (ICDE), Chania, Greece, 2021 pp. 828-839.
 doi: 10.1109/ICDE51399.2021.00077
