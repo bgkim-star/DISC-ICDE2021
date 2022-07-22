@@ -1,7 +1,7 @@
 # DISC Algorithm 
 
 ## Introduction
-- [`DISC`](https://doi.org/110.1109/ICDE51399.2021.00077) is an incremental density-based clustering algoritm for data streams (sliding window model).   
+- [`DISC`](https://doi.org/10.1109/ICDE51399.2021.00077) is an incremental density-based clustering algoritm for data streams (sliding window model).   
 - It supports `collect` and `cluster` operations to incrementally update clusters over data streams. 
   - The `collect` operation collects data points to be updated. 
   - The `cluster` operation updates clusters from the collected data points. 
