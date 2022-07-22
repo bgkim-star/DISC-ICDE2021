@@ -6,6 +6,7 @@
   - The `collect` operation collects data points to be updated. 
   - The `cluster` operation updates clusters from the collected data points. 
 - It supports `labelAndReturn` to compute the labels of the data points in the window. 
+- It returns the same clustering result as DBSCAN
 
 
 ## How to Use
