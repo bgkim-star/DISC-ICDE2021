@@ -1,4 +1,4 @@
-package DISC;
+package disc;
 
 import java.io.Serializable;
 import java.util.ArrayDeque;
@@ -8,13 +8,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
-import DISC.EpochBasedRtree.Element;
-import DISC.EpochBasedRtree.Epoch_Based_Rtree;
-import DISC.EpochBasedRtree.MBR;
-import DISC.EpochBasedRtree.Point;
-import DISC.UnionFind.UnionFind;
+import disc.epochbasedrtree.Element;
+import disc.epochbasedrtree.Epoch_Based_Rtree;
+import disc.epochbasedrtree.MBR;
+import disc.Point;
+import disc.unionfind.UnionFind;
 
 
 

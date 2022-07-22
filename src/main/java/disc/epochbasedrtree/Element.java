@@ -1,5 +1,6 @@
-package DISC.EpochBasedRtree;
+package disc.epochbasedrtree;
 
+import disc.Point;
 import java.io.Serializable;
 
 public class Element implements Serializable

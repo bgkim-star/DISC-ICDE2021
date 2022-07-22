@@ -1,4 +1,4 @@
-package DISC.UnionFind;
+package disc.unionfind;
 
 import java.util.HashMap;
 

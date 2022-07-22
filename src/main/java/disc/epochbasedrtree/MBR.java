@@ -1,4 +1,4 @@
-package DISC.EpochBasedRtree;
+package disc.epochbasedrtree;
 
 import java.io.Serializable;
 

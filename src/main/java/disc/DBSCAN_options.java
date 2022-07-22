@@ -1,4 +1,4 @@
-package DISC;
+package disc;
 
 
 public class DBSCAN_options {

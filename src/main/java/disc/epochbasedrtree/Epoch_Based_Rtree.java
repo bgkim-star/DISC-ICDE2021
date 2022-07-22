@@ -1,4 +1,4 @@
-package DISC.EpochBasedRtree;
+package disc.epochbasedrtree;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -246,9 +246,6 @@ public class Epoch_Based_Rtree implements Serializable{
 
 	}
 
-	/**
-	 * @see net.sf.jsi.SpatialIndex#delete(Rectangle, int)
-	 */
 
 	public boolean find(MBR box, Element e) {
 		deque.clear();
